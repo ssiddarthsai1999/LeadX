@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+background-image: linear-gradient(to right top, #000000, #210413, #330326, #410040, #460062, #3d0969, #311170, #1e1877, #19155f, #151247, #120d31, #0c031c);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    min-height: 100vh;
+    color: white;
+   
+}
