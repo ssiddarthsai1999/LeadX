@@ -65,6 +65,26 @@ function HomePage() {
                         <BounceLoader color="#8236d6" />
                     </div>
                 )}
+                {fetchedData.length > 0 && (
+                    <div className="w-full mx-auto flex  justify-center items-center align-middle mt-10">
+                        <div className="flex justify-between items-center align-middle bg-black/[0.4] w-3/12 p-4 px-8 rounded-full">
+                            <img src={csv} alt="CSV icon" />
+
+                            <div className=" mr-[120px] text-base text-white">
+                                <p>data.json</p>
+                                <p>59.2 MB</p>
+                            </div>
+
+                            <img
+                                onClick={downloadJsonData}
+                                className="cursor-pointer hover:scale-110 ease-in"
+                                src={download}
+                                alt="Download icon"
+                            />
+                        </div>
+                    </div>
+                )}
+
                 <div className="flex flex-wrap w-[1500px] mx-auto mt-[70px] justify-center gap-x-[100px] gap-y-[50px] p-2">
                     {fetchedData.slice(0, 6).map((item) => (
                         <div
@@ -122,26 +142,6 @@ function HomePage() {
                         </p>
                     )}
                 </div>
-
-                {fetchedData.length > 0 && (
-                    <div className="w-full mx-auto flex  justify-center items-center align-middle mt-10">
-                        <div className="flex justify-between items-center align-middle bg-black/[0.4] w-3/12 p-4 px-8 rounded-full">
-                            <img src={csv} alt="CSV icon" />
-
-                            <div className=" mr-[120px] text-base text-white">
-                                <p>data.json</p>
-                                <p>59.2 MB</p>
-                            </div>
-
-                            <img
-                                onClick={downloadJsonData}
-                                className="cursor-pointer hover:scale-110 ease-in"
-                                src={download}
-                                alt="Download icon"
-                            />
-                        </div>
-                    </div>
-                )}
             </div>
         </div>
     );
