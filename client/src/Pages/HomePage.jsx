@@ -65,11 +65,11 @@ function HomePage() {
                         <BounceLoader color="#8236d6" />
                     </div>
                 )}
-                <div className="flex w-[1400px] mx-auto mt-[70px]  justify-center gap-[100px] p-2 ">
-                    {fetchedData.slice(0, 2).map((item) => (
+                <div className="flex flex-wrap w-[1500px] mx-auto mt-[70px] justify-center gap-x-[100px] gap-y-[50px] p-2">
+                    {fetchedData.slice(0, 6).map((item) => (
                         <div
                             key={item.id}
-                            className=" text-xl flex flex-col text-[#C8C8C8] bg-black/[0.4] p-5 rounded-lg border-purple-900 border gap-3"
+                            className="text-xl flex flex-col text-[#C8C8C8] bg-black/[0.4] p-5 rounded-lg border-purple-900 border gap-3 w-[400px]"
                         >
                             <p>
                                 Name:{" "}
@@ -122,6 +122,7 @@ function HomePage() {
                         </p>
                     )}
                 </div>
+
                 {fetchedData.length > 0 && (
                     <div className="w-full mx-auto flex  justify-center items-center align-middle mt-10">
                         <div className="flex justify-between items-center align-middle bg-black/[0.4] w-3/12 p-4 px-8 rounded-full">
